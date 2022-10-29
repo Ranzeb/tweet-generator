@@ -10,6 +10,6 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/openai", router);
 
-
-app.listen(5000, () => console.log("API server is running..."));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("API server is running..."));
 
